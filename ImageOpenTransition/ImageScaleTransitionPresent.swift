@@ -36,7 +36,7 @@ class ImageScaleTransitionPresent : NSObject , UIViewControllerAnimatedTransitio
     @objc func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
         let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
-        let containerView = transitionContext.containerView()
+        let containerView = transitionContext.containerView()!
         
         toViewController!.view.alpha = alphaZero
         containerView.addSubview((toViewController!.view)!)
